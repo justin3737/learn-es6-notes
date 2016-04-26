@@ -37,4 +37,5 @@ add(2, 5, 3) // 10
 
 #資源
 [ECMAScript 6入门](http://es6.ruanyifeng.com/)
+
 [ES6学习笔记](http://www.jianshu.com/p/7cd1e5940268)
