@@ -3,7 +3,7 @@
 
 ## 函數的擴展
  - 允許函數的參數給予預設值
-```
+``` js
 function Point(x = 0, y = 0) {
   this.x = x;
   this.y = y;
@@ -15,7 +15,7 @@ p // { x: 0, y: 0 }
 - ES6引入rest参数（形式為"...變數名稱"）
     * 這樣就不需要使用arguments了
     * rest参数搭配的變數是一個陣列
-```
+``` js
 function add(...values) {
   let sum = 0;
 
