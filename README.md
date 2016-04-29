@@ -2,7 +2,40 @@
 學習ES6 筆記
 
 ## let
+ - ES6新增了let，用來宣告變數
+ - 它的用法類似於var, 但所宣告的變數，只在let所在的區域變數內有效。
+``` js
+{
+  let a = 10;
+  var b = 1;
+}
+a // ReferenceError: a is not defined.
+b // 1
+```
+ - for loop 的計數器，就很適合使用let。
+``` js
+for(let i = 0; i < arr.length; i++){}
+console.log(i)
+//ReferenceError: i is not defined
+``` 
 ## const
+- const也用來宣告變數，但是宣告的是常數。一旦宣告，常數的值就不能改變。
+``` js
+'use strict';
+const PI = 3.1415;
+PI // 3.1415
+PI = 3;
+// TypeError: "PI" is read-only
+```
+- const的作用域與let相同：只在宣告所在的區域内有效。 
+``` js
+if (true) {
+  const MAX = 5;
+}
+MAX // Uncaught ReferenceError: MAX is not defined
+```
+ - const宣告的常數，也與let一樣不可重複宣告。 
+ 
 ## 函數的擴展
  - 允許函數的參數給予預設值
 ``` js
