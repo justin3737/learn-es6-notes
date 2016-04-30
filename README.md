@@ -92,7 +92,62 @@ console.log(`my name is: ${name}`);
 //my name is: Justin
 ```
 ## Class
-## Set & Map
+ES6的類別，完全可以看作建構函数的另一種寫法。
+
+``` js
+class Point{ /*...*/ }
+typeof Point // "function"
+Point === Point.prototype.constructor // true
+```
+ - 在class中 ; 符號是可選的。
+ - constructor也是可選 的，如果不指定，會預設建構一個 空的constructor(){}
+ - 不可以用產生器（generator）来做建構函数
+ 
+ 
+ ``` js
+ class Circle{
+    constructor(radius){
+      this.radius = radius;
+      Circle.circlesMade++;
+    }
+
+    draw(circle,canvas){
+      console.log('draw something')
+    }
+
+    static get circleMade(){
+      return !this._count ? 0 : this.count;
+    }
+
+    static set circleMade(val){
+      return this._count  = val;
+    }
+
+    area(){
+      console.log(Math.pow(this.radius,2) * Math.PI)
+      return Math.pow(this.radius,2) * Math.PI;
+    }
+
+    get radius(){
+      return this._radius;
+    }
+
+    set radius(radius){
+      return this._radius = radius;
+    }
+
+  }
+
+  var  circle = new  Circle(3);
+
+  circle.draw() // draw something
+  circle.area() // 28.274333882308138
+  circle.radius = 99;
+  circle.area() // 30790.74959783356
+```
+
+- prototype對象的constructor属性，直接指向“類別”的本身，這與ES5的行為一致。
+
 
 #資源
 - [ECMAScript 6入门](http://es6.ruanyifeng.com/)
