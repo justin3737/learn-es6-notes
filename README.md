@@ -152,3 +152,4 @@ Point === Point.prototype.constructor // true
 #資源
 - [ECMAScript 6入门](http://es6.ruanyifeng.com/)
 - [ES6学习笔记](http://www.jianshu.com/p/7cd1e5940268)
+- [ES6 你可能不知道的事 - 基础篇](http://taobaofed.org/blog/2016/07/22/es6-basics/)
